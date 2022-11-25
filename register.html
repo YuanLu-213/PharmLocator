@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="js/register.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./home.html" style="margin-left: 20px"
+          >PharmLocator</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav"></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="./login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./register.html">Register</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="container background_color"
+        style="font-size: 20px; margin-top: 10px"
+      >
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6 form">
+            <h1 id="form-title">Fill the form to register</h1>
+            <form>
+              <div class="form-row" style="margin-top: 50px">
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="bottom_margin_10">Username:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        placeholder="Username"
+                      />
+                      <div
+                        id="username_valid"
+                        class="input_valid_feedback"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="bottom_margin_10">Password:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="password"
+                        placeholder="Password"
+                      />
+                      <div
+                        id="password_valid"
+                        class="input_valid_feedback"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="bottom_margin_10">Confirm:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="confirm_password"
+                        placeholder="Confirm Password"
+                      />
+                      <div
+                        id="confirm_password_valid"
+                        class="input_valid_feedback"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="bottom_margin_10">First Name:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstname"
+                        placeholder="First Name"
+                      />
+                      <div
+                        id="first_name_valid"
+                        class="input_valid_feedback"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="bottom_margin_10">Last Name:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastname"
+                        placeholder="Last Name"
+                      />
+                      <div
+                        id="last_name_valid"
+                        class="input_valid_feedback"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <span class="bottom_margin_10">Gender:</span>
+                    </div>
+                    <div class="col-md-6">
+                      <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                      <div id="gender_valid" class="input_valid_feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="bottom_margin_10">Age:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="age"
+                        placeholder="Age"
+                      />
+                      <div id="age_valid" class="input_valid_feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="bottom_margin_10">Address:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <textarea
+                        class="form-control"
+                        id="addr"
+                        rows="3"
+                        placeholder="Address"
+                      ></textarea>
+                      <div id="addr_valid" class="input_valid_feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12 bottom_margin_10">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <span class="bottom_margin_10"
+                        ># of Vaccine(s) Received:</span
+                      >
+                    </div>
+                    <div class="col-md-6">
+                      <select id="dose">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <div
+                        id="num_doses_valid"
+                        class="input_valid_feedback bottom_margin_10"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="bottom_margin_10" id="doses_info"></div>
+                </div>
+                <div class="bottom_margin_10" id="doses_info"></div>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-md-8"></div>
+              <div class="col-md-4">
+                <button id="submit" type="submit" class="btn btn-primary">
+                  Register
+                </button>
+              </div>
+            </div>
+            <div class="row feedback">
+              <div class="col-md-12" id="feedback"></div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-3"></div> -->
+        <div class="cup-register"></div>
+      </div>
+    </div>
+  </body>
+</html>

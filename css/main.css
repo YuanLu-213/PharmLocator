@@ -1,0 +1,125 @@
+.light_gray {
+  background-color: lightgray;
+}
+.bottom_margin_10 {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+.navbar {
+  background-image: linear-gradient(
+    to right,
+    rgb(251, 145, 213),
+    rgb(104, 237, 255)
+  );
+  color: white;
+}
+.navbar-brand {
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 20px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+.cup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 180px;
+  border: 6px solid #262626;
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: url(https://image.ibb.co/fmHm66/wave.png);
+  background-position: 0px 350px;
+  background-repeat: repeat-x;
+  animation: filling 15s ease-in-out infinite;
+  box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0, 0, 0, 1);
+}
+
+.cup:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  border: 6px solid #fff;
+  right: -57px;
+  top: 30px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+@keyframes filling {
+  50% {
+    background-position: 3000px -100px;
+  }
+  100% {
+    background-position: 8000px 350px;
+  }
+}
+#feedback {
+  margin-top: 20px;
+  color: #01dc01;
+  text-align: center;
+}
+#warning {
+  color: rgb(248, 13, 13);
+  position: absolute;
+  top: 70%;
+  left: 43%;
+}
+.cup-register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 180px;
+  border: 6px solid #262626;
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: url(https://image.ibb.co/fmHm66/wave.png);
+  background-position: 0px 350px;
+  background-repeat: repeat-x;
+  animation: filling 17s ease-in-out infinite;
+  box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0, 0, 0, 1);
+}
+
+.cup-register:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  border: 6px solid #fff;
+  right: -57px;
+  top: 30px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+@keyframes filling {
+  50% {
+    background-position: 3000px -100px;
+  }
+  100% {
+    background-position: 8000px 350px;
+  }
+}
+
+.form {
+  margin-left: 65px;
+}
+.input_valid_feedback {
+  color: red;
+}

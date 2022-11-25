@@ -1,0 +1,21 @@
+#content {
+  padding: 10%;
+  text-align: center;
+}
+#ready {
+  color: rgb(5, 194, 5);
+}
+.navbar {
+  background-image: linear-gradient(
+    to right,
+    rgb(251, 145, 213),
+    rgb(104, 237, 255)
+  );
+  color: white;
+}
+.navbar-brand {
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 20px;
+}

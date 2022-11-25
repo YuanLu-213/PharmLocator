@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="icon" href="data:;base64,=" />
+    <script type="text/javascript" src="./js/util.js"></script>
+    <script src="./js/test.js"></script>
+    <link rel="stylesheet" href="./css/test.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a
+          class="navbar-brand"
+          href="./person.html"
+          id="username-nav"
+          style="margin-left: 20px"
+          >Jack</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./test.html">Pharmacy Locator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./vac.html">Vaccination Locator</a>
+            </li>
+          </ul>
+
+          <div class="collapse navbar-collapse" id="navbarNav"></div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html" id="logout">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./edit.html" id="edit">Edit</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container" id="content">
+        <h1 style="margin-top: 20px; margin-left: 20px">Find a Pharmacy 🧪</h1>
+      </div>
+
+      <div class="row" id="map-container">
+        <div class="col-sm-6" style="overflow: auto; height: 550px">
+          <span>All pharmacies within 2km: </span>
+          <div class="list-group" id="testing-li-group">
+            <h1>Loading...</h1>
+            <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Ryan Health - Frederick Douglass</h5>
+            <small>May 1 - 15</small>
+          </div>
+          <p class="mb-1">2381 Frederick Douglass Boulevard, Manhattan</p>
+          <p>(877) 829-4692</p>
+          <p>Monday - Friday, 12:00 PM - 4:00 PM</p>
+          <small>Tests can be used on people 18 years and older.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Ryan Health - Frederick Douglass</h5>
+            <small>May 1 - 15</small>
+          </div>
+          <p class="mb-1">2381 Frederick Douglass Boulevard, Manhattan</p>
+          <p>(877) 829-4692</p>
+          <p>Monday - Friday, 12:00 PM - 4:00 PM</p>
+          <small>Tests can be used on people 18 years and older.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Test2</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Where is it?</p>
+          <small class="text-muted">other comments.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Test2</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Where is it?</p>
+          <small class="text-muted">other comments.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Test2</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Where is it?</p>
+          <small class="text-muted">other comments.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Test2</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Where is it?</p>
+          <small class="text-muted">other comments.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Test2</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Where is it?</p>
+          <small class="text-muted">other comments.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Test2</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Where is it?</p>
+          <small class="text-muted">other comments.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Test2</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Where is it?</p>
+          <small class="text-muted">other comments.</small>
+        </a> -->
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div id="floating-panel">
+            <b>Mode of Travel: </b>
+            <select id="mode">
+              <option value="WALKING">Walking</option>
+              <option value="DRIVING">Driving</option>
+              <option value="BICYCLING">Bicycling</option>
+              <option value="TRANSIT">Transit</option>
+            </select>
+          </div>
+          <div id="map"></div>
+        </div>
+      </div>
+
+      <!--
+   The `defer` attribute causes the callback to execute after the full HTML
+   document has been parsed. For non-blocking uses, avoiding race conditions,
+   and consistent behavior across browsers, consider loading using Promises
+   with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+  -->
+      <script
+        async
+        defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3w_2BGSy7OGzsxE6xOYSzV3MDKluHWAg&callback=initMap&language=en"
+      ></script>
+    </div>
+  </body>
+</html>

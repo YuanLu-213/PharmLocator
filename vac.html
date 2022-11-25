@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/vac.css">
+  <script type="text/javascript" src="./js/util.js"></script>
+  <script type="text/javascript" src="./js/vac.js"></script>
+  <link rel="icon" href="data:;base64,=">
+</head>
+
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./person.html" id="username-nav" style="margin-left: 20px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="./test.html">Pharmacy Locator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./vac.html">Vaccination Locator</a>
+        </li>
+      </ul>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="./home.html" id="logout">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./edit.html" id="edit">Edit</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+<div class="container" id="content">
+  <h1 style="margin-top: 20px; margin-left: 20px; ">Find a vaccination site 💉</h1>
+</div>
+
+<div class="row" id="content-container">
+  <div class="col-sm-6">
+
+<form>
+<div class="row vac-row">
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Current Latitude</label>
+    <input type="email" class="form-control" id="cur-lat" placeholder="Email" readonly>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputPassword4">Current Longitude</label>
+    <input type="password" class="form-control" id="cur-lon" placeholder="Password" readonly>
+  </div>
+</div>
+<div class="row vac-row">
+    <div class="form-group col-md-3">
+      <label for="inputAddress">Your Age</label>
+      <input type="text" class="form-control" id="dob" placeholder="1234 Main St" readonly>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputAddress2">Your Group</label>
+      <input type="text" class="form-control" id="vac-group" placeholder="Apartment, studio, or floor" readonly>
+    </div>
+  <div class="form-group col-md-6">
+    <label for="inputState">Vaccine Available for You</label>
+    <select id="vac-ava" class="form-control">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+</div>
+<div class="form-group row vac-row">
+  <label for="formControlRange">Select the distance to check out a vaccine site</label>
+  <input type="range" class="form-control-range" min="1" max="10" step="1" value="2" id="vac-dis">
+  <small>Your selection is: <span id="selected-dis">2</span> km</small>
+</div>
+</form>
+<button class="btn btn-primary" id="find-btn">Find</button>
+
+  </div>
+  <div class="col-sm-6" style="overflow:auto;height:550px;" id="vac-li-group">
+      <h2>Find your preferred vaccine based on your distance choice 🤗!</h1>
+  </div>
+
+</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3w_2BGSy7OGzsxE6xOYSzV3MDKluHWAg&language=en"></script>
+
+</div>
+</body>
